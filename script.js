@@ -125,6 +125,6 @@ function showNumberQuestion(numberQuestion, totalQuestions) {
 }
 
 function showScore(totalQuestions, numAnswerQuestions) {
-    let tag = `You gave ${numAnswerQuestions} correct answers out of a total of ${totalQuestions} questions.`;
+    let tag = `${numAnswerQuestions}/ ${totalQuestions} `;
     document.querySelector(".score_box .score_text").innerHTML = tag;
 }
