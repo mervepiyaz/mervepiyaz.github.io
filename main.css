@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EBEAE6;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+audio {
+    padding: 8px 15px;
+    margin-top: 10px;
+}
+
+.btn-start,
+.quiz_box,
+.score_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.quiz_box.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.quiz_box {
+    width: 1000px;
+    transform: translate(-50%, -50%) scale(0.7);
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.quiz_box header .title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.quiz_box .question_text {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.quiz_box .option_list {
+    padding: 18px 0;
+    justify-content: space-between;
+    display: flex;
+}
+
+.quiz_box .option_list .option {
+    border: 1px solid #151D3B;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    margin: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quiz_box .option_list .option:hover {
+    color: #112B2C;
+    background: #FFD33D;
+}
+
+.quiz_box .option_list .option.correct {
+    background: #01ff3c;
+}
+
+.quiz_box .option_list .option.incorrect {
+    background: #ff0019;
+}
+
+.quiz_box .option_list .option.disabled {
+    pointer-events: none;
+}
+
+.quiz_box .next_btn {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+}
+
+.quiz_box .next_btn.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.quiz_box footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* score box */
+
+.score_box.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.score_box {
+    width: 1000px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    transform: translate(-50%, -50%) scale(0.7);
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.score_box .icon {
+    font-size: 90px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.score_box .score_text {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
